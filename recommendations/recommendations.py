@@ -39,6 +39,7 @@ class RecommendationService(
     recommendations_pb2_grpc.RecommendationsServicer
 ):
     def Recommend(self, request, context):
+        print("recommending...")
         if request.category not in books_by_category:
             context.abort(grpc.StatusCode.NOT_FOUND, "Category not found")
 

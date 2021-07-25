@@ -1,6 +1,7 @@
 # marketplace/marketplace.py
 import os
 import grpc
+from flask import Flask
 from google.protobuf.json_format import MessageToJson
 from recommendations_pb2 import BookCategory, RecommendationRequest
 from recommendations_pb2_grpc import RecommendationsStub
